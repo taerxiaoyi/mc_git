@@ -734,7 +734,7 @@ class BaseController:
             # 基于误差计算自适应速度
             speed = min_speed + (max_speed - min_speed) * min(abs(error) / 0.5, 1.0)
             
-            if abs(error) > 0.05:
+            if abs(error) > 0.01:
                 if error > 0:
                     # 向目标移动
                     delta = speed * self.config.control_dt

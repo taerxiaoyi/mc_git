@@ -124,7 +124,7 @@ class RobotStateSimulator:
         """Publish the current simulated state."""
         # self.tick += 1
         # self.lowstate.tick = self.tick
-        self.sequences += 1
+        self.sequences = (self.sequences + 1) & 0xFFFF   # wrap around 0 ~ 65535
         self.lowstate.sequences = self.sequences
         self.lowstate.mode_machine = self.mode_machine
         self.lowstate.wireless_remote = self.wireless_remote

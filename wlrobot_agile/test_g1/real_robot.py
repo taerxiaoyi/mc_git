@@ -171,7 +171,8 @@ class E1RealEnv:
         # record the current pos
         init_dof_pos = np.zeros(dof_size, dtype=np.float32)
         for i in range(dof_size):
-            init_dof_pos[i] = self.low_state.motor_state[i].pos
+            # init_dof_pos[i] = self.low_state.motor_state[i].pos
+            init_dof_pos[i] = self.low_state.motor_state[i].q
         
         # move to default pos
         # Smoothly move to default position

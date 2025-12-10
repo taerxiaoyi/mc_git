@@ -14,13 +14,14 @@ from real_robot import E1RealEnv
 from base_controller import BaseController
 from config import Config
 import matplotlib.pyplot as plt
-# from westlake_sdkpy.core.channel import ChannelFactoryInitialize
+from westlake_sdkpy.core.channel import ChannelFactoryInitialize
 
-from unitree_sdk2py.core.channel import ChannelPublisher, ChannelFactoryInitialize
-from unitree_sdk2py.core.channel import ChannelSubscriber, ChannelFactoryInitialize
+# from unitree_sdk2py.core.channel import ChannelPublisher, ChannelFactoryInitialize
+# from unitree_sdk2py.core.channel import ChannelSubscriber, ChannelFactoryInitialize
 
 ANIM_SEEK_LOWER = 1
 ANIM_SEEK_UPPER = 2
+
 ANIM_SEEK_DEFAULT = 3
 ANIM_FINISHED = 4
 ANIM_SEEK_SCALE = 5
@@ -225,12 +226,12 @@ def main():
     import argparse
 
     parser = argparse.ArgumentParser(description="机器人关节速度变化测试")
-    parser.add_argument("--config", type=str, help="configs文件夹中的配置文件名称", default="g1.yaml")
+    parser.add_argument("--config", type=str, help="configs文件夹中的配置文件名称", default="o1.yaml")
     parser.add_argument("--joint_idx", type=int, help="要控制的关节索引", default=2)
     parser.add_argument("--joints", type=str, help="要控制的多个关节索引，用逗号分隔，例如：0,1,2", default=None)
     parser.add_argument("--min_range", type=float, help="最小关节位置(弧度)", default=-2)
     parser.add_argument("--max_range", type=float, help="最大关节位置(弧度)", default=2)
-    parser.add_argument("--preview", type=bool, default=True, help="在预览模式（仿真）下运行")
+    parser.add_argument("--preview", type=bool, default=False, help="在预览模式（仿真）下运行")
     parser.add_argument("--visualization", action="store_true", help="启用可视化")
     parser.add_argument("--test_mode", type=int, choices=[1, 2, 3, 4], 
                        help="测试模式: 1=随机, 2=阶跃, 3=扫频, 4=自定义", default=1)
@@ -244,7 +245,8 @@ def main():
     config = Config(config_path)
 
     # args.joints = '0,1,2,3,4,5,6,7,8,9,10,11'  # 临时测试代码，指定多个关节
-    args.joints = '0,1,2,3,4,5,6,7,8,9,10,11,15,16,17,18,19,20,21,22,23,24,25,26,27,28'  # 临时测试代码，取消多个关节指定
+    # args.joints = '0,1,2,3,4,5,6,7,8,9,10,11,15,16,17,18,19,20,21,22,23,24,25,26,27,28'  # 临时测试代码，取消多个关节指定
+    args.joints = '0,6'  # 临时测试代码，取消多个关节指定
 
     # 确定要控制的关节
     if args.joints:

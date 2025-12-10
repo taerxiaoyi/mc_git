@@ -148,7 +148,7 @@ def main():
     parser.add_argument("--joint_idx", type=int, help="要控制的关节索引", default=0)
     parser.add_argument("--joints", type=str, help="要控制的多个关节索引，用逗号分隔，例如：0,1,2", default=None)
     parser.add_argument("--speed_scale", type=float, help="速度比例因子", default=None)
-    parser.add_argument("--preview",type=bool,default=True, help="在预览模式（仿真）下运行")
+    parser.add_argument("--preview",type=bool,default=False, help="在预览模式（仿真）下运行")
     parser.add_argument("--visualization", action="store_true", help="启用可视化")
     parser.add_argument("--mode", type=str, choices=["lower", "upper", "default", "scale"], 
                        help="运动模式", default="scale")

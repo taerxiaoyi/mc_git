@@ -226,7 +226,8 @@
 
   <equality>
     <!-- 将 pelvis 固定到世界 -->
-    <weld name="fix_pelvis" body1="world" body2="pelvis" solimp="0.9 0.95 0.001" solref="0.02 1" anchor="0 0 0.78"/>
+    <!-- <weld name="fix_pelvis" body1="world" body2="pelvis" solimp="0.9 0.95 0.001" solref="0.02 1" anchor="0 0 0.78"/> -->
+    <weld name="fix_pelvis" body1="world" body2="pelvis" solimp="0.995 0.995 0.0001" solref="0.005 1" anchor="0 0 0.78"/>
   </equality>
 
     <actuator>

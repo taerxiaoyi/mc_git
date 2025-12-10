@@ -104,6 +104,15 @@ class E1RealEnv:
         self.mode_machine_ = self.low_state.mode_machine
         self.remote_controller.set(self.low_state.wireless_remote)
 
+    def send_cmd(self, cmd: LowCmdAG) -> None:
+        """
+        Send control commands to the robot.
+        
+        Args:
+            cmd: Control command to send
+        """
+        self.lowcmd_publisher_.Write(cmd)
+
     # def LowStateHgHandler(self, msg: LowStateHG) -> None:
     #     """
     #     Process received robot state messages.
@@ -172,7 +181,8 @@ class E1RealEnv:
         # record the current pos
         init_dof_pos = np.zeros(dof_size, dtype=np.float32)
         for i in range(dof_size):
-            init_dof_pos[i] = self.low_state.motor_state[i].pos
+            # init_dof_pos[i] = self.low_state.motor_state[i].pos
+            init_dof_pos[i] = self.low_state.motor_state[i].q
         
         # move to default pos
         # Smoothly move to default position

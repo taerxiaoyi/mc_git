@@ -152,7 +152,7 @@ def main():
     parser.add_argument("--speed_scale", type=float, help="0.0到1.0之间的速度比例值", default=0.4)
     parser.add_argument("--min_range", type=float, help="最小关节位置(弧度)", default=-1)
     parser.add_argument("--max_range", type=float, help="最大关节位置(弧度)", default=1)
-    parser.add_argument("--preview", type=bool, default=True, help="在预览模式（仿真）下运行")
+    parser.add_argument("--preview", type=bool, default=False, help="在预览模式（仿真）下运行")
     parser.add_argument("--visualization", action="store_true", help="启用可视化")
     parser.add_argument("--duration", type=int, help="测试持续时间（步数）", default=4000)
     args = parser.parse_args()
