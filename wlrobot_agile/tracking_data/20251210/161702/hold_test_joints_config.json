@@ -1,0 +1,15 @@
+{
+  "test_name": "hold_test_joints",
+  "start_time": "2025-12-10 16:17:02",
+  "config_file": "unknown",
+  "preview_mode": false,
+  "visualization": false,
+  "performance_stats": {
+    "avg_control_time": 0.020113458633422853,
+    "max_control_time": 0.02075791358947754,
+    "min_control_time": 0.020012855529785156,
+    "control_frequency": 49.71795344726462,
+    "total_runtime": 102.42186737060547
+  },
+  "end_time": "2025-12-10 16:18:44"
+}

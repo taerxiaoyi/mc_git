@@ -213,7 +213,7 @@ def main():
     # 移动到默认位置
     print("移动到默认位置...")
     controller.move_to_default_pos()
-    time.sleep(2)  # 等待到达默认位置
+    # time.sleep(2)  # 等待到达默认位置
 
     # 配置关节参数
     for joint_idx in joint_indices:

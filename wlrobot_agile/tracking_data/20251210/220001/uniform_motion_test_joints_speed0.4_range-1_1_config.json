@@ -1,0 +1,15 @@
+{
+  "test_name": "uniform_motion_test_joints_speed0.4_range-1_1",
+  "start_time": "2025-12-10 22:00:01",
+  "config_file": "unknown",
+  "preview_mode": false,
+  "visualization": false,
+  "performance_stats": {
+    "avg_control_time": 0.02016023635864258,
+    "max_control_time": 0.02336859703063965,
+    "min_control_time": 0.0200345516204834,
+    "control_frequency": 49.602593055478025,
+    "total_runtime": 84.99642515182495
+  },
+  "end_time": "2025-12-10 22:01:26"
+}
