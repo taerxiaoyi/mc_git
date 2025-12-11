@@ -1,1 +1,7 @@
+# IDE and editor settings
+.vscode/
+.idea/
+
+# Custom data directory
+tracking_data/
 
