@@ -1,2 +1,0 @@
-legged_gym
-westlake_sdkpy
